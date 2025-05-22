@@ -10,5 +10,10 @@ export default defineConfig({
   },
   server: {
     port: 8080
+  },
+  build: {
+    // Setting development mode for builds when not in production
+    minify: process.env.NODE_ENV === 'production',
+    sourcemap: process.env.NODE_ENV !== 'production'
   }
 });
