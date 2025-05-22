@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold-primary: #e2d3a3;
+  --gold-secondary: #8e8462;
+  --dark-bg: #121212;
+  --dark-secondary: #1a1a1a;
+}
+
+body {
+  font-family: 'Cinzel', serif;
+  background-color: var(--dark-bg);
+  color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel Decorative', serif;
+}
+
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.text-gold-secondary {
+  color: var(--gold-secondary);
+}
+
+.bg-gold {
+  background-color: var(--gold-primary);
+}
+
+.bg-gold-secondary {
+  background-color: var(--gold-secondary);
+}
+
+.border-gold {
+  border-color: var(--gold-primary);
+}
+
+.container {
+  @apply px-4 mx-auto;
+  max-width: 1280px;
+}
+
+.btn {
+  @apply px-6 py-3 rounded transition-all duration-300 font-medium;
+}
+
+.btn-primary {
+  @apply bg-gold-secondary text-white hover:bg-gold hover:text-dark-bg;
+}
+
+.btn-outline {
+  @apply border-2 border-gold text-gold hover:bg-gold hover:text-dark-bg;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center text-gold;
+}
+
+.section-subtitle {
+  @apply text-xl text-center mb-12 max-w-3xl mx-auto;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.before-after-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+}
+
+.before-after-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.image-after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  border-right: 3px solid var(--gold-primary);
+}
+
+.hover-scale {
+  @apply transition-transform duration-300;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.social-icon {
+  @apply w-10 h-10 flex items-center justify-center rounded-full border-2 border-gold text-gold hover:bg-gold hover:text-dark-bg transition-all duration-300;
+}
