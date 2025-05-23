@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/80 to-dark-bg z-0"></div>
 
       <div className="container relative z-10 text-center">
-        <div className="py-0 fade-in px-4 md:px-8 lg:px-16 mx-auto max-w-3xl">
+        <div className="fade-in md:px-8 lg:px-16 mx-auto w-full max-w-full px-[197px] py-0">
           <img 
             src="/lovable-uploads/e21b92a2-7799-4a6c-9206-7de4c90dbf31.png" 
             alt="Prestige Spray" 
