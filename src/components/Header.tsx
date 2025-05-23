@@ -28,9 +28,9 @@ const Header: React.FC = () => {
       <div className="container flex justify-between items-center">
         <a href="#" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/7facdbbe-7b7c-4fc8-8c6b-a4c0699e655e.png" 
+            src="/lovable-uploads/e21b92a2-7799-4a6c-9206-7de4c90dbf31.png" 
             alt="Prestige Spray Solutions" 
-            className="h-12 md:h-14"
+            className="h-14 md:h-16"
           />
         </a>
 
