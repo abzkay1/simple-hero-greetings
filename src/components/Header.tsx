@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Droplet } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,13 +27,11 @@ const Header: React.FC = () => {
     >
       <div className="container flex justify-between items-center">
         <a href="#" className="flex items-center gap-2">
-          <Droplet className="text-gold" size={32} />
-          <div>
-            <h1 className="font-cinzel-decorative text-xl md:text-2xl font-bold text-gold">
-              PRESTIGE
-            </h1>
-            <p className="text-xs tracking-wider -mt-1 text-white">SPRAY SOLUTIONS</p>
-          </div>
+          <img 
+            src="/lovable-uploads/7facdbbe-7b7c-4fc8-8c6b-a4c0699e655e.png" 
+            alt="Prestige Spray Solutions" 
+            className="h-12 md:h-14"
+          />
         </a>
 
         {/* Desktop Navigation */}

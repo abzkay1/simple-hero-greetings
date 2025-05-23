@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Send } from 'lucide-react';
 
@@ -91,7 +92,7 @@ const Contact: React.FC = () => {
                   <Send size={18} />
                 </a>
                 <a 
-                  href="https://facebook.com/prestigespraysolutions" 
+                  href="https://www.facebook.com/share/1BiohR1dJv/?mibextid=wwXIfr" 
                   className="social-icon"
                   target="_blank"
                   rel="noopener noreferrer"

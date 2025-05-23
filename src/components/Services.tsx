@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Home, Castle, Check, ShieldCheck, Clock, Leaf } from 'lucide-react';
 
@@ -49,8 +50,8 @@ const Services: React.FC = () => {
             icon={<ShieldCheck size={28} />}
           />
           <ServiceCard
-            title="Roof Cleaning"
-            description="Safely remove moss, lichens, and algae from all types of roofing materials to extend roof lifespan and improve curb appeal."
+            title="Window Detailing"
+            description="Professional cleaning of windows, frames, and sills to remove dirt, grime, and hard water stains for crystal clear views and enhanced curb appeal."
             icon={<Home size={28} />}
           />
           <ServiceCard
