@@ -4,17 +4,17 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen flex items-center justify-center" id="home">
-      {/* Background city skyline image with heavy dimming */}
-      <div className="absolute inset-0 bg-dark-bg/90 z-0">
+      {/* Background city skyline image with adjusted visibility */}
+      <div className="absolute inset-0 z-0">
         <img 
           src="https://images.pexels.com/photos/220147/pexels-photo-220147.jpeg" 
           alt="UK City Skyline" 
-          className="w-full h-full object-cover opacity-20 mix-blend-overlay"
+          className="w-full h-full object-cover opacity-40"
         />
       </div>
 
-      {/* Additional gradient overlay for more dimming */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/80 to-dark-bg z-0"></div>
+      {/* Gradient overlay with reduced opacity */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark-bg/60 to-dark-bg/80 z-0"></div>
 
       <div className="container relative z-10 text-center">
         <h1 className="text-5xl md:text-7xl lg:text-9xl font-cinzel-decorative mb-6 text-gold fade-in">
