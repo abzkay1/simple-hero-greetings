@@ -1,5 +1,5 @@
+
 import React from 'react';
-import { Droplet } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
