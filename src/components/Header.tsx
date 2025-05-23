@@ -30,7 +30,7 @@ const Header: React.FC = () => {
           <img 
             src="/lovable-uploads/e21b92a2-7799-4a6c-9206-7de4c90dbf31.png" 
             alt="Prestige Spray Solutions" 
-            className="h-14 md:h-16"
+            className="h-20 md:h-24 w-auto max-w-[220px] md:max-w-[280px]"
           />
         </a>
 
