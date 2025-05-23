@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
             <img 
               src="/lovable-uploads/c0bd17a7-2770-4419-994c-ea146646ed39.png" 
               alt="Prestige Spray Solutions" 
-              className="h-14 md:h-16 w-auto"
+              className="h-24 md:h-28 w-auto" // Substantially increased from h-14/h-16 to h-24/h-28
             />
           </div>
           
