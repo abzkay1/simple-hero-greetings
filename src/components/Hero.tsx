@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
       {/* Background London skyline image with adjusted visibility */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/lovable-uploads/780d9f3c-7bcb-4556-80ea-8234ad43f910.png" 
+          src="/lovable-uploads/65b3758e-d37e-497e-901f-e20167adfc4b.png" 
           alt="London Skyline" 
           className="w-full h-full object-cover opacity-40"
         />
