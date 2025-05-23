@@ -8,14 +8,12 @@ const Footer: React.FC = () => {
     <footer className="py-12 bg-dark-secondary border-t border-gray-800">
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <Droplet className="text-gold" size={28} />
-            <div>
-              <h3 className="font-cinzel-decorative text-lg font-bold text-gold">
-                PRESTIGE
-              </h3>
-              <p className="text-xs tracking-wider -mt-1 text-white">SPRAY SOLUTIONS</p>
-            </div>
+          <div>
+            <img 
+              src="/lovable-uploads/c0bd17a7-2770-4419-994c-ea146646ed39.png" 
+              alt="Prestige Spray Solutions" 
+              className="h-14 md:h-16 w-auto"
+            />
           </div>
           
           <div>
