@@ -4,11 +4,11 @@ import React from 'react';
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen flex items-center justify-center" id="home">
-      {/* Background city skyline image with adjusted visibility */}
+      {/* Background London skyline image with adjusted visibility */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.pexels.com/photos/220147/pexels-photo-220147.jpeg" 
-          alt="UK City Skyline" 
+          src="/lovable-uploads/2043e191-ccfb-4964-abad-dd7e13b15dd8.png" 
+          alt="London Skyline" 
           className="w-full h-full object-cover opacity-40"
         />
       </div>
