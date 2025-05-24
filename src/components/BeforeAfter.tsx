@@ -128,8 +128,8 @@ const BeforeAfter: React.FC = () => {
     {
       id: 3,
       title: "Patio Revival",
-      before: "https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      after: "https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      before: "/lovable-uploads/c269f172-1527-483a-a216-59d900c41c8d.png",
+      after: "/lovable-uploads/68651c4e-0f11-4a95-88fb-7ed56333d7f6.png"
     },
     {
       id: 4,
