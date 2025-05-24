@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 
 interface BeforeAfterProps {
@@ -11,51 +10,47 @@ const BeforeAfterSlider: React.FC<BeforeAfterProps> = ({ beforeImage, afterImage
   const [sliderPosition, setSliderPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const handleMove = (e: React.MouseEvent | React.TouchEvent) => {
+  const handleMove = (clientX: number) => {
     if (!containerRef.current) return;
     
     const containerRect = containerRef.current.getBoundingClientRect();
-    
-    // Get pageX for both mouse and touch events
-    const pageX = 'touches' in e 
-      ? e.touches[0].pageX 
-      : e.pageX;
-    
-    const position = ((pageX - containerRect.left) / containerRect.width) * 100;
-    
-    // Clamp position between 0 and 100
+    const position = ((clientX - containerRect.left) / containerRect.width) * 100;
     const clampedPosition = Math.max(0, Math.min(100, position));
     setSliderPosition(clampedPosition);
   };
 
-  // Handle mouse events
   const handleMouseDown = (e: React.MouseEvent) => {
-    handleMove(e);
+    handleMove(e.clientX);
     
     const handleMouseMove = (e: MouseEvent) => {
-      const mouseEvent = e as unknown as React.MouseEvent;
-      handleMove(mouseEvent);
+      handleMove(e.clientX);
+    };
+    
+    const handleMouseUp = () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
     };
     
     document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-    }, { once: true });
+    document.addEventListener('mouseup', handleMouseUp);
   };
 
-  // Handle touch events
   const handleTouchStart = (e: React.TouchEvent) => {
-    handleMove(e);
+    handleMove(e.touches[0].clientX);
     
     const handleTouchMove = (e: TouchEvent) => {
-      const touchEvent = e as unknown as React.TouchEvent;
-      handleMove(touchEvent);
+      if (e.touches.length > 0) {
+        handleMove(e.touches[0].clientX);
+      }
+    };
+    
+    const handleTouchEnd = () => {
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
     };
     
     document.addEventListener('touchmove', handleTouchMove);
-    document.addEventListener('touchend', () => {
-      document.removeEventListener('touchmove', handleTouchMove);
-    }, { once: true });
+    document.addEventListener('touchend', handleTouchEnd);
   };
 
   return (
