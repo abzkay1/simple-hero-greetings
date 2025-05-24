@@ -122,8 +122,8 @@ const BeforeAfter: React.FC = () => {
     {
       id: 2,
       title: "Driveway Transformation",
-      before: "https://images.pexels.com/photos/5767936/pexels-photo-5767936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      after: "https://images.pexels.com/photos/5710858/pexels-photo-5710858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      before: "/lovable-uploads/f8815598-4c0c-4282-8289-dd0c434ef644.png",
+      after: "/lovable-uploads/0ae7d8c3-45c6-4e44-94af-0993491d61c0.png"
     },
     {
       id: 3,
