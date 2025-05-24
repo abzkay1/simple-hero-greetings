@@ -134,8 +134,8 @@ const BeforeAfter: React.FC = () => {
     {
       id: 4,
       title: "Brick Wall Cleaning",
-      before: "https://images.pexels.com/photos/220182/pexels-photo-220182.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      after: "https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+      before: "/lovable-uploads/c6ed05fd-13a2-4627-bbca-f84e26dffbba.png",
+      after: "/lovable-uploads/461f9db9-e40d-4b56-8937-d367ddbac3a1.png"
     }
   ];
 
