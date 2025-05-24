@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 
 interface BeforeAfterProps {
@@ -115,8 +116,8 @@ const BeforeAfter: React.FC = () => {
     {
       id: 1,
       title: "Window Cleaning",
-      before: "https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg",
-      after: "https://images.pexels.com/photos/6195277/pexels-photo-6195277.jpeg"
+      before: "/lovable-uploads/2d60f0ce-fa58-4864-851d-71a1c5c7255b.png",
+      after: "/lovable-uploads/d4596d64-5b91-45df-9a45-96f520d751a4.png"
     },
     {
       id: 2,
