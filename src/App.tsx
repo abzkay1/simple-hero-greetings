@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,25 +11,36 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SimplePopup from './components/SimplePopup';
+import LoadingAnimation from './components/LoadingAnimation';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     document.title = 'Prestige Spray Solutions | Professional Pressure Washing';
   }, []);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
   
   return (
     <div className="min-h-screen bg-dark-bg">
-      <SimplePopup />
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-      <BeforeAfter />
-      <WhyChooseUs />
-      <Pricing />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      {isLoading && <LoadingAnimation onComplete={handleLoadingComplete} />}
+      
+      <div className={`transition-all duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+        <SimplePopup />
+        <Header />
+        <Hero />
+        <About />
+        <Services />
+        <BeforeAfter />
+        <WhyChooseUs />
+        <Pricing />
+        <Testimonials />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

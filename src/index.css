@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -323,4 +322,186 @@ h1, h2, h3, h4, h5, h6 {
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+/* Advanced Loading Animation Keyframes */
+@keyframes logo-entrance {
+  0% {
+    transform: scale(0.5) rotate(-180deg);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  60% {
+    transform: scale(1.1) rotate(0deg);
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes logo-glow {
+  0%, 100% {
+    filter: brightness(110%) drop-shadow(0 0 20px rgba(226, 211, 163, 0.5));
+  }
+  50% {
+    filter: brightness(130%) drop-shadow(0 0 40px rgba(226, 211, 163, 0.8));
+  }
+}
+
+@keyframes ring-expand {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes text-reveal {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+    letter-spacing: 10px;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    letter-spacing: normal;
+  }
+}
+
+@keyframes shimmer-text {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fade-in-delayed {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 0%;
+    transform: translateX(-100%);
+  }
+  50% {
+    width: 100%;
+    transform: translateX(0%);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-180deg);
+  }
+}
+
+/* Loading Animation Classes */
+.animate-logo-entrance {
+  animation: logo-entrance 2s ease-out forwards;
+}
+
+.animate-logo-glow {
+  animation: logo-glow 3s ease-in-out infinite;
+}
+
+.animate-ring-expand {
+  animation: ring-expand 2s ease-out forwards;
+}
+
+.animate-text-reveal {
+  animation: text-reveal 1.5s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.animate-shimmer-text {
+  background: linear-gradient(90deg, var(--gold-secondary), var(--gold-primary), var(--gold-secondary));
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-text 2s ease-in-out infinite;
+}
+
+.animate-fade-in-delayed {
+  animation: fade-in-delayed 2s ease-out forwards;
+}
+
+.animate-loading-bar {
+  animation: loading-bar 3s ease-in-out infinite;
+}
+
+.animate-float-1 {
+  animation: float-1 4s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-2 3s ease-in-out infinite 1s;
+}
+
+/* Animation Delays */
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1.5s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+/* Performance Optimizations for Loading */
+.animate-logo-entrance,
+.animate-logo-glow,
+.animate-ring-expand {
+  will-change: transform, opacity, filter;
 }
