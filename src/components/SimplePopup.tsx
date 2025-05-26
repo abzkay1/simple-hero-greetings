@@ -44,6 +44,20 @@ const SimplePopup: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Prevent body scroll when popup is visible
+  useEffect(() => {
+    if (isVisible) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isVisible]);
+
   const handleClose = () => {
     setIsVisible(false);
   };
@@ -51,9 +65,15 @@ const SimplePopup: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-24 left-0 right-0 z-30 flex justify-center px-4">
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-24">
+      {/* Backdrop to prevent scrolling and interaction */}
+      <div 
+        className="absolute inset-0 bg-black bg-opacity-30 backdrop-blur-sm"
+        onClick={handleClose}
+      />
+      
       {/* Popup */}
-      <div className="relative bg-black bg-opacity-80 border border-white border-opacity-20 rounded-lg p-4 max-w-md w-full backdrop-blur-sm">
+      <div className="relative bg-black bg-opacity-90 border border-white border-opacity-20 rounded-lg p-4 max-w-md mx-4 backdrop-blur-sm shadow-2xl">
         {/* Close button */}
         <button
           onClick={handleClose}
