@@ -58,7 +58,12 @@ const SimplePopup: React.FC = () => {
     };
   }, [isVisible]);
 
-  const handleClose = () => {
+  const handleClose = (e?: React.MouseEvent) => {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    console.log('Closing popup'); // Debug log
     setIsVisible(false);
   };
 
@@ -77,7 +82,8 @@ const SimplePopup: React.FC = () => {
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-2 right-2 text-white hover:text-gray-300 transition-colors z-10"
+          className="absolute top-2 right-2 text-white hover:text-gray-300 transition-colors z-50 p-1 rounded-full hover:bg-white hover:bg-opacity-10"
+          type="button"
         >
           <X size={16} />
         </button>
@@ -126,6 +132,7 @@ const SimplePopup: React.FC = () => {
           <button 
             onClick={handleClose}
             className="px-4 py-2 bg-white bg-opacity-15 border border-white border-opacity-20 text-white rounded text-sm hover:bg-opacity-25 transition-all"
+            type="button"
           >
             Claim Offer
           </button>
