@@ -44,22 +44,20 @@ const SimplePopup: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-40 flex items-start justify-center pt-20">
-      {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black bg-opacity-20"
-        onClick={() => setIsVisible(false)}
-      />
-      
+    <div className="fixed top-24 left-0 right-0 z-30 flex justify-center px-4">
       {/* Popup */}
-      <div className="relative bg-black bg-opacity-80 border border-white border-opacity-20 rounded-lg p-4 max-w-md mx-4 backdrop-blur-sm">
+      <div className="relative bg-black bg-opacity-80 border border-white border-opacity-20 rounded-lg p-4 max-w-md w-full backdrop-blur-sm">
         {/* Close button */}
         <button
-          onClick={() => setIsVisible(false)}
-          className="absolute top-2 right-2 text-white hover:text-gray-300 transition-colors"
+          onClick={handleClose}
+          className="absolute top-2 right-2 text-white hover:text-gray-300 transition-colors z-10"
         >
           <X size={16} />
         </button>
@@ -106,7 +104,7 @@ const SimplePopup: React.FC = () => {
           </p>
 
           <button 
-            onClick={() => setIsVisible(false)}
+            onClick={handleClose}
             className="px-4 py-2 bg-white bg-opacity-15 border border-white border-opacity-20 text-white rounded text-sm hover:bg-opacity-25 transition-all"
           >
             Claim Offer
