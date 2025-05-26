@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
@@ -11,22 +12,32 @@ const About: React.FC = () => {
               ABOUT <span className="text-white">PRESTIGE SPRAY</span>
             </h2>
             <p className="text-gray-300 mb-6">
-              Prestige Spray Solutions is a youth-led professional pressure washing company serving London and Manchester. 
-              We're passionate about transforming outdoor spaces and restoring properties to their former glory.
+              Prestige Spray Solutions is a rapidly growing professional pressure washing company with operations 
+              across London and Manchester. Since our establishment, we've built a reputation for excellence, 
+              serving over 500 satisfied customers with our premium cleaning services.
             </p>
             <p className="text-gray-300 mb-6">
-              Using professional-grade equipment and environmentally friendly cleaning solutions, we ensure remarkable results
-              every time - revealing the hidden beauty beneath years of dirt, grime, and weathering.
+              Our dedicated team uses cutting-edge, commercial-grade equipment and environmentally conscious cleaning 
+              solutions to deliver outstanding results. We're proud to be the only company in our service areas 
+              offering a guaranteed 12-hour response time to all customer inquiries.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-8">
               <div className="flex items-center gap-2">
                 <CheckCircle className="text-gold" size={20} />
-                <span>Professional Equipment</span>
+                <span>500+ Completed Projects</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="text-gold" size={20} />
-                <span>Fast Response Time</span>
+                <span>12hr Response Guarantee</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="text-gold" size={20} />
+                <span>Multi-City Operations</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="text-gold" size={20} />
+                <span>Commercial Grade Equipment</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="text-gold" size={20} />
@@ -34,15 +45,7 @@ const About: React.FC = () => {
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="text-gold" size={20} />
-                <span>Satisfaction Guarantee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="text-gold" size={20} />
-                <span>Free Consultations</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="text-gold" size={20} />
-                <span>Fully Insured</span>
+                <span>Fully Insured & Bonded</span>
               </div>
             </div>
           </div>
@@ -55,8 +58,12 @@ const About: React.FC = () => {
                 className="w-full h-auto rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-dark-bg p-4 rounded shadow-lg border border-gold">
-                <p className="text-gold font-bold text-xl">5+</p>
-                <p className="text-sm">Years Experience</p>
+                <p className="text-gold font-bold text-xl">500+</p>
+                <p className="text-sm">Happy Customers</p>
+              </div>
+              <div className="absolute -top-6 -right-6 bg-success p-4 rounded shadow-lg">
+                <p className="text-white font-bold text-lg">12hr</p>
+                <p className="text-white text-xs">Response Time</p>
               </div>
             </div>
           </div>
