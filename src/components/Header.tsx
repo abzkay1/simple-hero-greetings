@@ -36,12 +36,12 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8">
-          <a href="#about" className="text-white hover:text-gold transition-all duration-300 relative group">
-            About
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
-          </a>
           <a href="#services" className="text-white hover:text-gold transition-all duration-300 relative group">
             Services
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#pricing" className="text-white hover:text-gold transition-all duration-300 relative group">
+            Pricing
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
           </a>
           <a href="#gallery" className="text-white hover:text-gold transition-all duration-300 relative group">
@@ -77,18 +77,18 @@ const Header: React.FC = () => {
         <div className="md:hidden bg-dark-secondary absolute w-full animate-fade-in backdrop-blur-md">
           <div className="container py-4 flex flex-col gap-4">
             <a 
-              href="#about" 
-              className="text-white hover:text-gold transition-all duration-300 py-2 border-b border-gray-800 hover-lift"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </a>
-            <a 
               href="#services" 
               className="text-white hover:text-gold transition-all duration-300 py-2 border-b border-gray-800 hover-lift"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
+            </a>
+            <a 
+              href="#pricing" 
+              className="text-white hover:text-gold transition-all duration-300 py-2 border-b border-gray-800 hover-lift"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Pricing
             </a>
             <a 
               href="#gallery" 
