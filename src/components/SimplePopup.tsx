@@ -129,13 +129,22 @@ const SimplePopup: React.FC = () => {
             As London's premier high-quality exterior detailing company, we deliver exceptional results that transform your property.
           </p>
 
-          <button 
-            onClick={handleClose}
-            className="px-4 py-2 bg-white bg-opacity-15 border border-white border-opacity-20 text-white rounded text-sm hover:bg-opacity-25 transition-all"
-            type="button"
-          >
-            Claim Offer
-          </button>
+          <div className="flex gap-2 justify-center">
+            <button 
+              onClick={handleClose}
+              className="px-4 py-2 bg-white bg-opacity-15 border border-white border-opacity-20 text-white rounded text-sm hover:bg-opacity-25 transition-all"
+              type="button"
+            >
+              Claim Offer
+            </button>
+            <button 
+              onClick={handleClose}
+              className="px-4 py-2 bg-transparent border border-white border-opacity-40 text-white rounded text-sm hover:bg-white hover:bg-opacity-10 transition-all"
+              type="button"
+            >
+              Not Interested
+            </button>
+          </div>
         </div>
       </div>
     </div>
