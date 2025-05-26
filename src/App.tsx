@@ -10,7 +10,6 @@ import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import PromoPopup from './components/PromoPopup';
 
 function App() {
   useEffect(() => {
@@ -19,7 +18,6 @@ function App() {
   
   return (
     <div className="min-h-screen bg-dark-bg">
-      <PromoPopup />
       <Header />
       <Hero />
       <About />
