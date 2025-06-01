@@ -51,7 +51,7 @@ const PricingCard: React.FC<{
       </ul>
       
       <a 
-        href="https://wa.me/447835296159?text=I'm%20interested%20in%20the%20Premium%20Package%20for%20£450" 
+        href="https://wa.me/447835296159?text=I'm%20interested%20in%20the%20Premium%20Package%20for%20£550" 
         className={`btn w-full text-center transition-all duration-300 transform hover:scale-105 ${isPopular ? 'btn-primary' : 'btn-outline'}`}
         target="_blank"
         rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const Pricing: React.FC = () => {
           
           <PricingCard
             title="All-in-One Premium"
-            price="£450"
+            price="£550"
             description="Complete exterior transformation that lasts all year"
             features={[
               "Full driveway/patio clean",

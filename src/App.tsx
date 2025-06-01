@@ -10,7 +10,6 @@ import Pricing from './components/Pricing';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SimplePopup from './components/SimplePopup';
 import LoadingAnimation from './components/LoadingAnimation';
 
 function App() {
@@ -29,14 +28,13 @@ function App() {
       {isLoading && <LoadingAnimation onComplete={handleLoadingComplete} />}
       
       <div className={`transition-all duration-1000 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
-        <SimplePopup />
         <Header />
         <Hero />
         <About />
-        <Services />
         <BeforeAfter />
-        <WhyChooseUs />
+        <Services />
         <Pricing />
+        <WhyChooseUs />
         <Testimonials />
         <Contact />
         <Footer />
