@@ -125,7 +125,7 @@ const Pricing: React.FC = () => {
             <div className="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
               <Sparkles className="text-gold" size={24} />
             </div>
-            <h3 className="text-lg font-bold text-gold mb-2">£200 Minimum</h3>
+            <h3 className="text-lg font-bold text-gold mb-2">£300 Minimum</h3>
             <p className="text-gray-300 text-sm">Quality guaranteed on every job, no matter the size</p>
           </div>
           

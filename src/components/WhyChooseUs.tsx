@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ShieldCheck, Timer, Award, Banknote, Sparkles, Users } from 'lucide-react';
 
@@ -69,8 +70,8 @@ const WhyChooseUs: React.FC = () => {
             
             <ReasonCard
               icon={<Users size={24} />}
-              title="Youth-Led Business"
-              description="Support a youth-run enterprise bringing fresh energy and modern approaches to traditional services."
+              title="Experienced Team"
+              description="Our skilled professionals bring expertise and dedication to every project, ensuring exceptional results."
             />
           </div>
         </div>

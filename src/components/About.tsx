@@ -53,8 +53,8 @@ const About: React.FC = () => {
           <div className="fade-in">
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/4239146/pexels-photo-4239146.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Professional pressure washing" 
+                src="https://images.pexels.com/photos/5825532/pexels-photo-5825532.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                alt="Professional pressure washing equipment in action" 
                 className="w-full h-auto rounded-lg shadow-xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-dark-bg p-4 rounded shadow-lg border border-gold">
